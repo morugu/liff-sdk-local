@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>LIFF SDK Local</title>
+		<script>
+			window.liffSettings = {
+				userId: 'U12345',
+			};
+		</script>
+		<script src="../dist/liff-sdk-local.min.js"></script>
+		<script>
+			liff.init(function(data) {
+				liff.getProfile().then(function(data) {
+					document.write('userId: ' + data.userId + '<br /> displayName: ' + data.displayName + '<br /> pictureUrl: ' + data.pictureUrl);
+					liff.sendMessages([
+						{
+							type: 'text',
+							text: 'Hello ' + data.displayName,
+						},
+					]);
+				});
+			});
+		</script>
+	</head>
+	<body></body>
+</html>

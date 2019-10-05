@@ -1,0 +1,18 @@
+{
+	"name": "liff-sdk-local",
+	"version": "0.0.1",
+	"description": "LIFF SDK for local debugging",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "parcel build src/liff-sdk-local.ts -o liff-sdk-local.min.js --target browser --global liff --no-source-maps"
+	},
+	"author": "Shoya Shiraki",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^3.6.3"
+	},
+	"dependencies": {
+		"@types/node": "^12.7.11",
+		"parcel-bundler": "^1.12.3"
+	}
+}
